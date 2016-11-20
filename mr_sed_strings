@@ -1,0 +1,148 @@
+# Strings de sustitucion para nombres de archivo
+# Escapar caracteres especiales del shell
+# \(...\)\? contenido agrupado entre () puede estar o no \?
+# \? indica que la expr.anterior puede ocurrir 1 o 0 vez
+
+# elimina todos los signos [ ]
+s/\[//g
+s/\]//g
+
+# elimina titulos de paginas de descarga
+s/\.\?[Ww]\{3\}.[Dd]ivx[Tt]ota[Ll].[Cc]o[Mm]//
+s/(\?(\?www\.serieonline\.net)\?)\?//
+s/www\.divxatope\.com//
+# s/(\?www\.serieonline\.net)\?//
+# s/www\.serieonline\.net//
+s/ \?(\?Elite[Tt]orrent.net)\?//
+s/\.\?www\.TorrentMas\.com//
+s/SpaTorrent\.\(org\)\?\(com\)\?//
+s/www\.PorTorrent\.com//
+s/\.\?www.newpct1\?.com//
+s/ToDoTorrente\.com//
+s/TaquillaSpa\.com//
+s/TorrentMas\.com//
+s/(\?[Ww]\{2,3\}\.\?[Ll]o[Kk]o[Tt]orrents\.[Cc]\?o\?[Mm]\?)\?//
+s/www\.fantasticteam\.tk//
+s/www\.cantabriatorrent\.net//
+s/Torrentmas\.com//
+s/www\.topetorrent\.com//
+s/www\.pctestrenos\.com//
+s/www\.zonatorrent\.com//
+s/EspaTaquilla\.com//
+s/www\.spanishare\.com//
+s/DameDivx\.com//
+s/www\.cantabriatorrent\.net//
+s/www\.torrentspain\.com//
+s/www\.fanclubt\.com//
+s/www\.elitedivx\.c//
+s/www\.netemule\.com//
+s/www\.AnimeHD\.org//
+s/www\.TodoCVCD\.com//
+
+s/DVDRip\.Xvid\.ToDoTorrente\.com//
+s/\.DVDrip\.ximorip\.2000//
+
+s/(\?DVDRip\.Divx\.Spanish)\?//
+s/\.(\?DVDRip.Divx.AC3.5.1.Spanish)\?//
+s/AC3.5.1.Español.Castellano//
+s/(HDRip-Xvid-Ac3.Dual)//
+
+s/BluRayRip//
+s/[Bb][Rr][Rr][Ii][Pp]//
+s/(\?[Hh][Dd][Rr]ip)\?//
+s/\.[Xx][Vv][Ii][Dd]\.//	# .xvid.
+s/\.\?[Xx][Vv][Ii][Dd]//	# (. si o no)xvid
+s/(\?[Dd][Vv][Dd].\?[Rr][Ii][Pp])\?//
+s/[Dd][Vv][Dd][Rr]\?//
+s/SVCD,MPEG-2//
+s/[Cc][Vv][Cc][Dd]//
+s/vhs rip//
+s/TDT//
+s/(240p_H.264-AAC)//
+s/\.DivX.5.0.2//
+s/\.\?A[Cc][23].[52]\.[01]\?//
+s/A[Cc]3//
+s/2\.0//
+s/1\.1//
+s/\.\?M[Pp]3//
+s/\.Goodtimes//
+s/English-Spanish//
+s/\.\?SPAN[Ii]SH//
+s/(\?[Ss]panish)\?//
+s/Españ\?N\?ol//
+s/ES-EN//
+s/ESP//
+s/\.Castellano//
+s/Dua[Ll]//
+s/M1080//
+s/HQ//
+s/TSPA//
+s/DTL//
+s/[Aa]nimaci[óo]n//
+
+s/\.ximorip//
+s/By Emel//
+s/\.LeoParis//
+s/sisibuto//
+
+# HATEFUL STRINGS
+s/(\?\(TS\)\?\(BR\)\?.Screener)\?//
+s/(WEB-SCREENER HC)//
+s/(\?\([Bb][Rr].\)\?[Ll][Ii][Nn][Ee])\?//g  # br. puede ir o no
+# s/(\?[Bb][Rr].[Ll][Ii][Nn][Ee])\?//
+s/Screener//
+s/IPSPANISHDIVXBYRI//
+s/by.abo//
+s/by.kanryu//
+s/by.RyuK//
+s/by.wikiwiki131//
+s/by.tito-jackie//
+s/by.Onark//
+s/by.ainhdesi//
+s/by.\?Rotto//
+s/By.FreAk.TEAm//
+s/por.galiley//
+s/toni32//
+s/By.cristo2312//
+s/By.TCR//
+s/by.Jairotoya//
+s/jose21a//
+s/Por.Gamolama//
+s/by.parisinateam//
+s/By.Dr.Jordi//
+s/mpeg4//
+s/[Vv][Hh][Ss]//
+s/[Dd][Vv][Bb]//
+s/VHSrip//
+s/(\?[Ll][Ii][Nn][Ee].[Dd][Uu][Bb])\?//
+s/hdtv-screener//
+s/SAT//
+s/SEDG//
+s/Ripped//
+s/Shared//
+s/(mejorado)//
+s/protos//
+s/Scopare//
+s/_XKlusiveDD_//
+
+# elimina puntos, parentesis (), espacios y barras bajas
+s/ \?()//
+s/\.\.//g
+s/ \.//g
+s/\./ /g
+s/___//
+s/_/ /g
+s/  / /g # dos espacios en uno
+
+# asigna el punto (.) a las extensiones de archivo
+s/ \?[Aa][Vv][Ii]$/\.avi/
+#s/avi$/.avi/
+s/ \?mkv$/.mkv/
+s/ \?divx$/\.divx/
+# s/divx$/.divx/
+s/ \?mpg$/.mpg/
+s/ \?mp4$/.mp4/
+s/ \?flv$/.flv/
+# s/mp4$/.mp4/
+
+s/\([A-Z]\)/\L\1/g  # convierte mayusculas a minusculas ([L]ower)
